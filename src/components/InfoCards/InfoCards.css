@@ -90,28 +90,33 @@
 }
 
 .infoCard-Body h1 {
-  font-size: 2.5vw;
+  font-size: 5vh;
 }
 
 .infoCard-Body p {
   width: 35vw;
-  font-size: 1vw;
+  font-size: 2vh;
 }
 
 .infoCard-Body .logo {
   position: absolute;
   top: 50%;
   left: 30%;
-  width: 20vw;
+  width: 50vh;
   height: 30vh;
 }
 
 .infoCard-Body .boundaryDefinition {
-  font-size: 0.9vw;
+  font-size: 1.8vh;
 }
 
 .infoCard-Body .gif {
   width: 20vw;
-  heiht: 5vh;
+  height: 5vh;
+}
+
+.infoCard-Body .big-gif {
+  width: 20vw;
+  height: 20vh;
 }
 /*# sourceMappingURL=InfoCards.css.map */

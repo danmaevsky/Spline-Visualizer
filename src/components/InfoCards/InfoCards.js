@@ -219,7 +219,7 @@ function Card8() {
         The Boundary Conditions only require input from you if you selected <b>Clamped</b> or <b>Not-a-Knot + Clamped</b>. The amount of inputs is
         determined by the degree of spline you chose.
       </p>
-      <img className="gif" src={Tables} alt="Demonstrating choosing points" />
+      <img className="big-gif" src={Tables} alt="Demonstrating choosing points" />
     </div>
   );
 }
@@ -248,10 +248,14 @@ function Card10() {
   return (
     <div className="infoCard-Body">
       <h1>Further Reading</h1>
+      <a href="https://github.com/danmaevsky/Spline-Visualizer/tree/master">
+        The GitHub Repo for this project for those interested in seeing the source code
+      </a>
       <a href="https://en.wikipedia.org/wiki/Spline_(mathematics)">An Overview of the Mathematical Spline</a>
       <a href="https://en.wikipedia.org/wiki/Flat_spline">An Overview of the Spline as it was used in history</a>
       <a href="https://en.wikipedia.org/wiki/Composite_B%C3%A9zier_curve">Bezier Curves</a>
       <a href="https://en.wikipedia.org/wiki/Non-uniform_rational_B-spline">Non-Uniform Rational Basis Splines (NURBS) for Precise 3D Modeling</a>
+      <a href="https://ieeexplore.ieee.org/document/8485301">Splines used in Autonomous Vehicles</a>
       <a href="https://www.geeksforgeeks.org/interpolation-methods-in-computer-graphics/">More about Interpolation</a>
     </div>
   );

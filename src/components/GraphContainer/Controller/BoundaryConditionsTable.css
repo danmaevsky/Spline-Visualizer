@@ -91,6 +91,7 @@
   width: calc(25vw - 0.1vw);
   height: 5vh;
   border: solid 1px;
+  font-size: 2vh;
 }
 
 .conditions {
