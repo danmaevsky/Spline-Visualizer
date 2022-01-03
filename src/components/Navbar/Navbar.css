@@ -1,0 +1,62 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #92b5f4;
+  width: 99vw;
+  margin: 0;
+  height: 7vh;
+}
+
+.navbar h1 {
+  color: #001e55;
+  position: absolute;
+  margin: 0;
+  margin-left: 9vh;
+  font-size: 5vh;
+}
+
+.logo {
+  height: 7vh;
+  width: 7vh;
+  position: absolute;
+  left: 0;
+}
+
+.helpButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 2vh;
+  height: 5vh;
+  width: 5vh;
+  border: solid;
+  border-width: 0.2vh;
+  border-radius: 50%;
+  border-color: #001e55;
+  background-color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #001e55;
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.helpButton:hover {
+  background-color: #f0f0f0;
+}
+/*# sourceMappingURL=Navbar.css.map */

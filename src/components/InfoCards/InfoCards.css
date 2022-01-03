@@ -1,0 +1,117 @@
+@-webkit-keyframes buttonHover {
+  0% {
+    background-color: #92b5f4;
+  }
+  100% {
+    background-color: #a0c7f3;
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+    background-color: #92b5f4;
+  }
+  100% {
+    background-color: #a0c7f3;
+  }
+}
+
+.infoCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border: solid;
+  border-color: #001e55;
+  border-width: 2px;
+  border-radius: 4px;
+  width: 50vw;
+  height: 70vh;
+  position: absolute;
+  top: 15vh;
+  left: 25vw;
+}
+
+.next-prevButtons {
+  position: absolute;
+  top: 90%;
+  left: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 14vw;
+}
+
+.cardButton {
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 1vw;
+  border: none;
+  border-radius: 5px;
+  width: 6vw;
+  height: 5vh;
+  background-color: #92b5f4;
+}
+
+.cardButton:hover {
+  -webkit-animation: buttonHover 0.25s;
+          animation: buttonHover 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.exitButton {
+  position: absolute;
+  top: 90%;
+  left: 80%;
+}
+
+.infoCard-Body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #001e55;
+}
+
+.infoCard-Body h1 {
+  font-size: 2.5vw;
+}
+
+.infoCard-Body p {
+  width: 35vw;
+  font-size: 1vw;
+}
+
+.infoCard-Body .logo {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 20vw;
+  height: 30vh;
+}
+
+.infoCard-Body .boundaryDefinition {
+  font-size: 0.9vw;
+}
+
+.infoCard-Body .gif {
+  width: 20vw;
+  heiht: 5vh;
+}
+/*# sourceMappingURL=InfoCards.css.map */

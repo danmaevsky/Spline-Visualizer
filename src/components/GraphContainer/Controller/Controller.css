@@ -1,0 +1,324 @@
+@-webkit-keyframes dropdownItem-onHover {
+  100% {
+    background-color: #cfe1f8;
+  }
+}
+
+@keyframes dropdownItem-onHover {
+  100% {
+    background-color: #cfe1f8;
+  }
+}
+
+@-webkit-keyframes dropdownItem-deHover {
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes dropdownItem-deHover {
+  100% {
+    background-color: white;
+  }
+}
+
+@-webkit-keyframes togglePresetButton-onHover {
+  100% {
+    background-color: #e5effa;
+  }
+}
+
+@keyframes togglePresetButton-onHover {
+  100% {
+    background-color: #e5effa;
+  }
+}
+
+.controller {
+  position: absolute;
+  left: 50vw;
+  top: 18vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60vh;
+  width: 40vw;
+}
+
+.controllerTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 30vh;
+  width: 40vw;
+}
+
+.controllerBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  width: 40vw;
+  top: 33.33vh;
+}
+
+.dropdown {
+  cursor: pointer;
+}
+
+.dropdown p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.dropdownItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 3vh;
+  width: 12vw;
+  border-color: #001e55;
+  background-color: white;
+}
+
+.dropdownItem:hover p {
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 5px;
+  -webkit-animation: dropdownItem-onHover 0.25s;
+          animation: dropdownItem-onHover 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.selectedDropdownItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: self-start;
+      align-self: self-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 3vh;
+  width: 12vw;
+  border-radius: 2px;
+  border: solid 1px;
+  border-color: #001e55;
+  background-color: #f4f9ff;
+}
+
+.selectedDropdownItem:hover {
+  -webkit-animation: dropdownItem-onHover 0.25s;
+          animation: dropdownItem-onHover 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.unselectedDropdownItems {
+  border: solid 1px;
+  border-top: 0;
+}
+
+.togglePresetButton {
+  cursor: pointer;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 5vh;
+  min-width: 5vh;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #505050;
+}
+
+.togglePresetButton:hover {
+  -webkit-animation: togglePresetButton-onHover 0.15s;
+          animation: togglePresetButton-onHover 0.15s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.togglePresetSvg {
+  height: 14px;
+  width: 14px;
+}
+
+.presetFunctionBox {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vw;
+  height: 5vh;
+}
+
+.presetFunctionBoxInnerBox {
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #505050;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin-left: 0.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40vw;
+  height: 5vh;
+}
+
+.presetFunctionBoxInnerBox p {
+  margin: 0;
+}
+
+.presetFunctionBoxInnerBox .dropdown {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 1vh;
+}
+
+.numDataBox {
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  width: 37.91vw;
+  height: 5vh;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #505050;
+  background-color: #e5effa;
+}
+
+.numDataInputBox {
+  font-family: "Roboto";
+  font-size: 15px;
+  border: solid 1px;
+  border-radius: 3px;
+  text-align: center;
+  width: 3vw;
+}
+
+.invalidNumData {
+  color: #790000;
+}
+
+.splineDegreeBox {
+  position: relative;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  width: 37.91vw;
+  height: 5vh;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #505050;
+  background-color: #e5effa;
+}
+
+.splineDegreeBox .degreeSlider {
+  width: 20vw;
+}
+
+.splineDegreeBox .degreeSlider .rc-slider-rail {
+  z-index: 0;
+  background-color: white;
+}
+
+.boundConditionTypeBox {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  width: 37.91vw;
+  height: 5vh;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #505050;
+}
+
+.boundConditionTypeBox p {
+  margin: 0;
+}
+
+.boundConditionTypeBox .dropdown {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 1vh;
+}
+/*# sourceMappingURL=Controller.css.map */

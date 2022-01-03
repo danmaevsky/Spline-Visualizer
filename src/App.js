@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import InfoCards from "./components/InfoCards/InfoCards";
+import GraphContainer from "./components/GraphContainer/GraphContainer";
+import { useState, useEffect } from "react";
+import useToggle from "./hooks/useToggle";
 
 function App() {
+  const [showCards, setShowCards] = useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar setShowCards={setShowCards} />
+      <GraphContainer />
+      {showCards ? <InfoCards setShowCards={setShowCards} /> : null}
     </div>
   );
 }

@@ -1,0 +1,200 @@
+$navy-blue: #001e55
+$function-color: #cfe1f8
+$box-background: #e5effa
+$selected-item-color: #f4f9ff
+$border-color: #505050
+
+// animations
+@keyframes dropdownItem-onHover
+    100%
+        background-color: $function-color
+
+@keyframes dropdownItem-deHover
+    100%
+        background-color: white
+
+@keyframes togglePresetButton-onHover
+    100%
+        background-color: $box-background
+
+.controller
+    position: absolute
+    left: 50vw
+    top: 18vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 60vh
+    width: 40vw
+
+.controllerTop
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 30vh
+    width: 40vw
+
+.controllerBottom
+    display: flex
+    align-items: flex-start
+    flex-direction: row
+    justify-content: space-between
+    position: absolute
+    width: 40vw
+    top: 33.33vh
+
+.dropdown
+    cursor: pointer
+    p
+        user-select: none
+
+.dropdownItem
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 3vh
+    width: 12vw
+    // border: solid 1px
+    border-color: $navy-blue
+    background-color: white
+
+.dropdownItem:hover
+    p
+        padding-left: 10%
+        padding-right: 10%
+        border-radius: 5px
+        animation: dropdownItem-onHover 0.25s
+        animation-fill-mode: forwards
+
+.selectedDropdownItem
+    display: flex
+    align-self: self-start
+    align-items: center
+    justify-content: center
+    height: 3vh
+    width: 12vw
+    border-radius: 2px
+    border: solid 1px
+    border-color: $navy-blue
+    background-color: $selected-item-color
+
+.selectedDropdownItem:hover
+    animation: dropdownItem-onHover 0.25s
+    animation-fill-mode: forwards
+
+.unselectedDropdownItems
+    border: solid 1px
+    border-top: 0
+
+.togglePresetButton
+    cursor: pointer
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 5vh
+    min-width: 5vh
+    border: solid 1px
+    border-radius: 5px
+    border-color: $border-color
+
+.togglePresetButton:hover
+    animation: togglePresetButton-onHover 0.15s
+    animation-fill-mode: forwards
+
+.togglePresetSvg
+    height: 14px
+    width: 14px
+
+.presetFunctionBox
+    position: relative
+    z-index: 2
+    display: flex
+    width: 40vw
+    height: 5vh
+
+.presetFunctionBoxInnerBox
+    border: solid 1px
+    border-radius: 5px
+    border-color: $border-color
+    padding-left: 1vw
+    padding-right: 1vw
+    margin-left: 0.5vw
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 40vw
+    height: 5vh
+    p
+        margin: 0
+
+    .dropdown
+        align-self: flex-start
+        margin-top: 1vh
+
+.numDataBox
+    z-index: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-left: 1vw
+    padding-right: 1vw
+    width: 37.91vw
+    height: 5vh
+    border: solid 1px
+    border-radius: 5px
+    border-color: $border-color
+    background-color: $box-background
+
+.numDataInputBox
+    font-family: "Roboto"
+    font-size: 15px
+    border: solid 1px
+    border-radius: 3px
+    text-align: center
+    width: 3vw
+
+.invalidNumData
+    color: #790000
+
+.splineDegreeBox
+    position: relative
+    z-index: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-left: 1vw
+    padding-right: 1vw
+    width: 37.91vw
+    height: 5vh
+    border: solid 1px
+    border-radius: 5px
+    border-color: $border-color
+    background-color: $box-background
+
+    .degreeSlider
+        width: 20vw
+        .rc-slider-rail
+            z-index: 0
+            background-color: white
+
+.boundConditionTypeBox
+    position: relative
+    z-index: 1
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-left: 1vw
+    padding-right: 1vw
+    width: 37.91vw
+    height: 5vh
+    border: solid 1px
+    border-radius: 5px
+    border-color: $border-color
+
+    p
+        margin: 0
+
+    .dropdown
+        align-self: flex-start
+        margin-top: 1vh

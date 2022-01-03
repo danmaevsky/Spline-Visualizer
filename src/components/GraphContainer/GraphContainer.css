@@ -1,0 +1,10 @@
+.graphContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10vw;
+          column-gap: 10vw;
+  width: 99vw;
+  margin: 0;
+}
+/*# sourceMappingURL=GraphContainer.css.map */

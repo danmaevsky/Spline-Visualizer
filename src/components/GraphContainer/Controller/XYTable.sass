@@ -1,0 +1,88 @@
+$navy-blue: #001e55
+$function-color: #cfe1f8
+$box-background: #e5effa
+
+@keyframes highlight
+    0%
+        background-color: initial
+    50%
+        background-color: #92b5f4
+    100%
+        backround-color: initial
+
+.xyTableHeader
+    font-family: "Roboto"
+    display: flex
+    width: 12vw
+    div
+        background-color: $box-background
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 6vw
+        height: 5vh
+        border: solid 1px
+
+.tableRow
+    width: 12vw
+    display: flex
+    input
+        font-family: "Roboto"
+        font-size: 15px
+        text-align: center
+        padding: 0
+        margin: 0
+        width: 5.92vw
+        height: 4vh
+        border: solid 1px
+
+    input:focus
+        outline: none
+
+    input:hover
+        animation: highlight 0.35s
+
+    div
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0
+        margin: 0
+        width: 5.92vw
+        height: 4vh
+        border: solid 1px
+        p
+            text-align: center
+
+.tableRow-alt
+    width: 12vw
+    display: flex
+    input
+        background-color: $box-background
+        font-family: "Roboto"
+        font-size: 15px
+        text-align: center
+        padding: 0
+        margin: 0
+        width: 5.92vw
+        height: 4vh
+        border: solid 1px
+
+    input:focus
+        outline: none
+
+    input:hover
+        animation: highlight 0.35s
+
+    div
+        background-color: $box-background
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0
+        margin: 0
+        width: 5.92vw
+        height: 4vh
+        border: solid 1px
+        p
+            text-align: center
