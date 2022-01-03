@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/danmaevsky/Spline-Visualizer/static/css/main.4dcde676.chunk.css",
-    "main.js": "/danmaevsky/Spline-Visualizer/static/js/main.9f9c30ac.chunk.js",
-    "main.js.map": "/danmaevsky/Spline-Visualizer/static/js/main.9f9c30ac.chunk.js.map",
+    "main.js": "/danmaevsky/Spline-Visualizer/static/js/main.ace840d6.chunk.js",
+    "main.js.map": "/danmaevsky/Spline-Visualizer/static/js/main.ace840d6.chunk.js.map",
     "runtime-main.js": "/danmaevsky/Spline-Visualizer/static/js/runtime-main.7a4d892d.js",
     "runtime-main.js.map": "/danmaevsky/Spline-Visualizer/static/js/runtime-main.7a4d892d.js.map",
     "static/css/2.25f1cd1f.chunk.css": "/danmaevsky/Spline-Visualizer/static/css/2.25f1cd1f.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.25f1cd1f.chunk.css",
     "static/js/2.e6c723be.chunk.js",
     "static/css/main.4dcde676.chunk.css",
-    "static/js/main.9f9c30ac.chunk.js"
+    "static/js/main.ace840d6.chunk.js"
   ]
 }
