@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/danmaevsky/Spline-Visualizer/static/css/main.4dcde676.chunk.css",
+    "main.js": "/danmaevsky/Spline-Visualizer/static/js/main.9f9c30ac.chunk.js",
+    "main.js.map": "/danmaevsky/Spline-Visualizer/static/js/main.9f9c30ac.chunk.js.map",
+    "runtime-main.js": "/danmaevsky/Spline-Visualizer/static/js/runtime-main.7a4d892d.js",
+    "runtime-main.js.map": "/danmaevsky/Spline-Visualizer/static/js/runtime-main.7a4d892d.js.map",
+    "static/css/2.25f1cd1f.chunk.css": "/danmaevsky/Spline-Visualizer/static/css/2.25f1cd1f.chunk.css",
+    "static/js/2.e6c723be.chunk.js": "/danmaevsky/Spline-Visualizer/static/js/2.e6c723be.chunk.js",
+    "static/js/2.e6c723be.chunk.js.map": "/danmaevsky/Spline-Visualizer/static/js/2.e6c723be.chunk.js.map",
+    "static/js/3.cff3e4e4.chunk.js": "/danmaevsky/Spline-Visualizer/static/js/3.cff3e4e4.chunk.js",
+    "static/js/3.cff3e4e4.chunk.js.map": "/danmaevsky/Spline-Visualizer/static/js/3.cff3e4e4.chunk.js.map",
+    "index.html": "/danmaevsky/Spline-Visualizer/index.html",
+    "static/css/2.25f1cd1f.chunk.css.map": "/danmaevsky/Spline-Visualizer/static/css/2.25f1cd1f.chunk.css.map",
+    "static/css/main.4dcde676.chunk.css.map": "/danmaevsky/Spline-Visualizer/static/css/main.4dcde676.chunk.css.map",
+    "static/js/2.e6c723be.chunk.js.LICENSE.txt": "/danmaevsky/Spline-Visualizer/static/js/2.e6c723be.chunk.js.LICENSE.txt",
+    "static/media/Bound.db43e4dd.gif": "/danmaevsky/Spline-Visualizer/static/media/Bound.db43e4dd.gif",
+    "static/media/NumPoints.08de0f64.gif": "/danmaevsky/Spline-Visualizer/static/media/NumPoints.08de0f64.gif",
+    "static/media/PresetFunction.c46aade1.gif": "/danmaevsky/Spline-Visualizer/static/media/PresetFunction.c46aade1.gif",
+    "static/media/SplineDegree.bd047837.gif": "/danmaevsky/Spline-Visualizer/static/media/SplineDegree.bd047837.gif",
+    "static/media/Tables.5e7e5137.gif": "/danmaevsky/Spline-Visualizer/static/media/Tables.5e7e5137.gif",
+    "static/media/logo.8a2dfab5.svg": "/danmaevsky/Spline-Visualizer/static/media/logo.8a2dfab5.svg",
+    "static/media/spline_covid.5790aa27.png": "/danmaevsky/Spline-Visualizer/static/media/spline_covid.5790aa27.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7a4d892d.js",
+    "static/css/2.25f1cd1f.chunk.css",
+    "static/js/2.e6c723be.chunk.js",
+    "static/css/main.4dcde676.chunk.css",
+    "static/js/main.9f9c30ac.chunk.js"
+  ]
+}
