@@ -87,12 +87,14 @@ function NumDataBox(props) {
     }
     setNumPoints(numerical);
     setValue(numerical);
-    pointsArrayMethods.clear();
+    // pointsArrayMethods.clear();
     // setIsValid(true);
   };
 
   useEffect(() => {
-    pointsArrayMethods.set(Array(numPoints).fill(undefined));
+    for (let i = numPoints - 1; i < 10; i++) {
+      pointsArrayMethods.update(i, undefined);
+    }
   }, [numPoints]);
 
   useEffect(() => {
@@ -178,9 +180,9 @@ function TogglePresetButton(props) {
     <div className="togglePresetButton" onClick={togglePreset}>
       <svg className="togglePresetSvg" viewBox="0px 0px 14px 14px">
         {enablePreset ? (
-          <circle cx="7" cy="7" r="6px" stroke="#001e55" fill="#cee0ff"></circle>
+          <circle className="circle" cx="7" cy="7" r="6px" stroke="#001e55" fill="#cee0ff"></circle>
         ) : (
-          <circle cx="7" cy="7" r="6px" stroke="#001e55" fill="#ffffff"></circle>
+          <circle className="circle" cx="7" cy="7" r="6px" stroke="#001e55" fill="#ffffff"></circle>
         )}
       </svg>
     </div>
@@ -196,12 +198,12 @@ function SplineDegreeBox(props) {
   const onChange = (newValue) => {
     let k = Number(newValue);
     setSplineDegree(k);
-    if (boundaryConditionType === "Not-a-Knot + Clamped" || boundaryConditionType === "Not-a-Knot + Natural") {
-      let kOffset = k > 1 ? (k > 2 ? 2 : 1) : 0;
-      boundArrayMethods.set(new Array(k - 1 - kOffset).fill(undefined));
-    } else {
-      boundArrayMethods.set(new Array(k - 1).fill(undefined));
-    }
+    // if (boundaryConditionType === "Not-a-Knot + Clamped" || boundaryConditionType === "Not-a-Knot + Natural") {
+    //   let kOffset = k > 1 ? (k > 2 ? 2 : 1) : 0;
+    //   boundArrayMethods.set(new Array(k - 1 - kOffset).fill(undefined));
+    // } else {
+    //   boundArrayMethods.set(new Array(k - 1).fill(undefined));
+    // }
   };
 
   return (

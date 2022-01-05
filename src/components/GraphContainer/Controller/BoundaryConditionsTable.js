@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./BoundaryConditionsTable.css";
 
 export default function BoundaryConditionsTable(props) {
@@ -177,6 +177,7 @@ function TableRowWithInput(props) {
     });
   };
 
+  const initialRender = useRef(true);
   useEffect(() => {
     if (value === undefined) {
       boundArrayMethods.update(id, undefined);
@@ -186,9 +187,13 @@ function TableRowWithInput(props) {
   }, [value]);
 
   useEffect(() => {
-    setValue(undefined);
-    setDispValue("");
-  }, [splineDegree, boundaryConditionType]);
+    if (initialRender.current) {
+      initialRender.current = false;
+    } else {
+      setValue(undefined);
+      setDispValue("");
+    }
+  }, [boundaryConditionType]);
 
   return (
     <div className="boundaryTableRow">

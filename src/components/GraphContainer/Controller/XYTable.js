@@ -107,6 +107,7 @@ function XYTableRow(props) {
     setY(presetFunction(numerical));
   };
 
+  const initialRender = useRef(true);
   useEffect(() => {
     if (!(x === undefined || y === undefined)) {
       pointsArrayMethods.update(id, new Point(x, y));
@@ -116,12 +117,16 @@ function XYTableRow(props) {
   }, [x, y]);
 
   useEffect(() => {
-    setX(undefined);
-    setY(undefined);
-    setDispX("");
-    setDispY("");
-    pointsArrayMethods.set(new Array(numPoints).fill(undefined));
-  }, [enablePreset, numPoints, presetFunction]);
+    if (initialRender.current) {
+      initialRender.current = false;
+    } else {
+      setX(undefined);
+      setY(undefined);
+      setDispX("");
+      setDispY("");
+      pointsArrayMethods.set(new Array(10).fill(undefined));
+    }
+  }, [enablePreset, presetFunction]);
 
   if (enablePreset) {
     return (

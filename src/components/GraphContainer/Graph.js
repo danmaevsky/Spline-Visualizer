@@ -15,21 +15,22 @@ export default function Graph(props) {
   const presetFunction = props.presetFunction;
   const splineDegree = props.splineDegree;
   const boundaryConditionType = props.boundaryConditionType;
-  const boundArray = props.boundArray;
+  let boundArray = props.boundArray;
   const isNotAKnot = boundaryConditionType === "Not-a-Knot + Natural" || boundaryConditionType === "Not-a-Knot + Clamped";
 
   // isGraphable_Points boolean to know when the xArray and yArray are
   // actually populated. This means no "undefined" values
   const isGraphable_Points = points !== undefined && points.length >= 1;
   if (isGraphable_Points) {
+    points = points.slice(0, numPoints);
     points = points.filter((p) => p !== undefined);
   }
-  points = points.sort((p1, p2) => p1.x > p2.x);
 
-  // isGraphablel_Spline boolean to know when the Spline is ready to be
+  // isGraphable_Spline boolean to know when the Spline is ready to be
   // graphed. This means the boundArray has no "undefined" values if
   // a clamped boundary condition is chosen
   let boundArrayReady = true;
+  boundArray = boundArray.slice(0, splineDegree - 1);
   if (boundaryConditionType === "Clamped" || boundaryConditionType === "Not-a-Knot + Clamped") {
     boundArrayReady = !boundArray.includes(undefined);
   }
@@ -45,6 +46,7 @@ export default function Graph(props) {
   const isGraphable_Function = isGraphable_Points && enablePreset;
 
   // populating the different graphed components
+  points = points.sort((p1, p2) => p1.x > p2.x);
   let xPoints = points.map((point) => point.x);
   let yPoints = points.map((point) => point.y);
 
