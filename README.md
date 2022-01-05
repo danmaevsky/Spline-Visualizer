@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+# Spline Visualizer
+Welcome to the Spline Visualizer! In the fall of my sophomore year of college, I took a class in Numerical Analysis and Computing and became fascinated by splines and seeing how they work. One day, we had a homework assignment that involved computing a cubic spline interpolation for a sample size of 5 (...by hand), and I decided that instead of doing all this work just for one negative sign to be messed up or letting one arithmetic mistake ruin my night, I would write myself a script in MATLAB that would do it for me. But more than that, I would write the script so that it could handle _any_ degree of spline, not just cubic (linear, quadratic, quartic, decic, etc)! Thus the idea to share this on a web app, in a way to visually see its updates in realtime, was born. I hope you enjoy too, because I had a blast creating this and diving deeper into splines! You can find the application here: https://danmaevsky.github.io/Spline-Visualizer/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Boundary Conditions
+In practice, most engineering applications only require up to the cubic degree spline. For splines up to cubic, the definition of the different boundary conditions are clearly defined. Once you go up in degree from there, the literature is ambiguous. To clarify the assumptions I made in this app:
 
-## Available Scripts
+**Natural**: for a cubic spline, natural boundary conditions mean that the second derivative at the end points are set to 0. These two conditions are enough to satisfy the (3-1)=2 remaining equations needed to solve for the cubic spline. For a spline of arbitrary degree _k_ however, I extended the definition to mean first setting the (_k-1_)<sup>th</sup> order derivatives equal to 0 at the boundaries, and then going down in order to the next highest order derivatives. For example, a _k_ = 5 spline requires 4 additional boundary conditions to solve, so it will set **S<sub>0</sub><sup>(4)</sup>(x<sub>0</sub>) = 0** and **S<sub>N-1</sub><sup>(4)</sup>(x<sub>N</sub>) = 0**, _as well as_ **S<sub>0</sub>'''(x<sub>0</sub>) = 0** and **S<sub>N-1</sub>'''(x<sub>N</sub>) = 0**.
 
-In the project directory, you can run:
+**Clamped**: for a cubic spline, clamped boundary conditions are defined as being user-specified settings for the first derivative at both end points; in other words, the user may specify the exact tangential slope at the end points. The idea is that if the user _knows_ the interpolated functions derivative at the boundaries, then the interpolant spline can be made much more accurate, almost like being thrown in the right direction at first. Again, this definition gets fuzzy when generalizing to arbitrary degree _k_. I take the extended definition to mean start by setting the first derivatives at the boundaries equal to the specified input _u<sub>i</sub>_ , and then going up in order of derivative until the total number of boundary conditions necessary is met. For example, a _k_ = 4 spline requires 3 boundary conditions, so **S<sub>0</sub>'(x<sub>0</sub>) = _u_<sub>0</sub>**, **S<sub>N-1</sub>'(x<sub>N</sub>) = _u_<sub>1</sub>**, and **S<sub>0</sub>''(x<sub>0</sub>) = _u_<sub>2</sub>** would be the 3 equations used.
 
-### `npm start`
+**Not-a-Knot**: for a cubic spline, the Not-a-Knot boundary condition is defined to mean that the knot connecting the first spline segment S<sub>0</sub> and second spline segment S<sub>1</sub>, as well as the final two S<sub>N-2</sub> and S<sub>N-1</sub>, is treated almost like it is "not a knot". This is achieved by making the (_k_)<sup>th</sup> order derivative at that knot also continuous between the two segments. This is great for getting 2 additional equations out, and is sufficient for a cubic spline, but when generalizing to higher degrees, one still needs more equations. To get more, I extended the definition of Not-a-Knot to combine it with natural and clamped. For a _k_ = 6 spline, the Not-a-Knot conditions would look like: **S<sub>0</sub><sup>(6)</sup>(x<sub>1</sub>) = S<sub>1</sub><sup>(6)</sup>(x<sub>1</sub>)** and **S<sub>N-2</sub><sup>(6)</sup>(x<sub>N-1</sub>) = S<sub>N-1</sub><sup>(6)</sup>(x<sub>N-1</sub>)**. A _k_ = 6 spline requires 5 boundary conditions, so we still have (5-2)=3 conditions left to create. The remaining 3 boundary conditions can come from either clamped or natural as described above.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Inconsistent Systems
+Quick word about solving linear systems! Sometimes, the systems of equations generated by all of the conditions imposed on the spline generator, from fitting all the data points and maintaining continuity and smoothness to the boundary conditions, are inconsistent. That is, they cannot be solved because the matrix they produce is singular. This is akin to in grade school algebra when you learned about the number of solutions to a system i.e. if the lines were not parallel, then there was _one_ solution; if the lines were parallel but had a different y-intercept, then there were _no solutions_; if the lines were parallel and had the same y-intercept (essentially the same line), then there were _infinitely many_ solutions. The parameters you choose in this app can sometimes lead to either no solution or no unique solution. This is to be expected, as sometimes it is simply impossible to meet all the requirements without introducing contradictions.
