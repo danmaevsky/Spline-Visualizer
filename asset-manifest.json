@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Spline-Visualizer/static/css/main.2fbc36c6.chunk.css",
-    "main.js": "/Spline-Visualizer/static/js/main.616f79e6.chunk.js",
-    "main.js.map": "/Spline-Visualizer/static/js/main.616f79e6.chunk.js.map",
+    "main.css": "/Spline-Visualizer/static/css/main.55712c15.chunk.css",
+    "main.js": "/Spline-Visualizer/static/js/main.57775917.chunk.js",
+    "main.js.map": "/Spline-Visualizer/static/js/main.57775917.chunk.js.map",
     "runtime-main.js": "/Spline-Visualizer/static/js/runtime-main.fcf2b9e3.js",
     "runtime-main.js.map": "/Spline-Visualizer/static/js/runtime-main.fcf2b9e3.js.map",
     "static/css/2.25f1cd1f.chunk.css": "/Spline-Visualizer/static/css/2.25f1cd1f.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.cff3e4e4.chunk.js.map": "/Spline-Visualizer/static/js/3.cff3e4e4.chunk.js.map",
     "index.html": "/Spline-Visualizer/index.html",
     "static/css/2.25f1cd1f.chunk.css.map": "/Spline-Visualizer/static/css/2.25f1cd1f.chunk.css.map",
-    "static/css/main.2fbc36c6.chunk.css.map": "/Spline-Visualizer/static/css/main.2fbc36c6.chunk.css.map",
+    "static/css/main.55712c15.chunk.css.map": "/Spline-Visualizer/static/css/main.55712c15.chunk.css.map",
     "static/js/2.a9ec1209.chunk.js.LICENSE.txt": "/Spline-Visualizer/static/js/2.a9ec1209.chunk.js.LICENSE.txt",
     "static/media/Bound.db43e4dd.gif": "/Spline-Visualizer/static/media/Bound.db43e4dd.gif",
     "static/media/NumPoints.08de0f64.gif": "/Spline-Visualizer/static/media/NumPoints.08de0f64.gif",
@@ -26,7 +26,7 @@
     "static/js/runtime-main.fcf2b9e3.js",
     "static/css/2.25f1cd1f.chunk.css",
     "static/js/2.a9ec1209.chunk.js",
-    "static/css/main.2fbc36c6.chunk.css",
-    "static/js/main.616f79e6.chunk.js"
+    "static/css/main.55712c15.chunk.css",
+    "static/js/main.57775917.chunk.js"
   ]
 }
